@@ -19,6 +19,7 @@ on:
 jobs: 
   run-github-actions:
     runs-on: ubuntu-latest
+    # needs: [] Permite crear jobs secuenciales y no paralelos.
     steps:
       - name: List Files
         run: |
