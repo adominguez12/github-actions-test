@@ -2,8 +2,13 @@ name: test
 
 on:
   push:
-  pull_request:
-    types: [opened, assigned, closed, reopened]
+    branches:
+      - master
+      - 'feature/**'
+    # branches-ignore:
+    #   - null
+  # pull_request:
+  #   types: [opened, assigned, closed, reopened]
 
 jobs: 
   run-github-actions:
