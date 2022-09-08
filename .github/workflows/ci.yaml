@@ -3,8 +3,14 @@ name: test
 on:
   push:
     branches:
-      - master
+      - main
       - 'feature/**'
+      - '!featC' #Para ignorar alguna branch en particular.
+    tags: 
+      - latest
+    paths:
+      - '**.js' #Sólo inicia el workflow cuando se pushea algún archivo JS.
+      - '!index.js' #Para ignorar un archivo particular JS.
     # branches-ignore:
     #   - null
   # pull_request:
